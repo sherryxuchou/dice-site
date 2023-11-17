@@ -7,22 +7,31 @@
     position: relative;
     top: -800px;
     left: 500px;
-    width: 8vw;
-    height: auto;
+    width: auto; /*8vw; */
+    height: 8vw; /*auto;*/
     object-fit: contain;
 }
 
 .title{
     position: relative;
+    top: -1130px;
+    left: 910px;
+    z-index: 1;
+}
+
+.title img{
     width: 20vw;
     height: auto;
-    top: -1140px;
-    left: 900px;
-    z-index: 1;
+}
+
+.title button {
+    background-color: transparent;
+    border: none;
 }
 
 #textField{
     font-family: "Sofia Pro", Arial, Helvetica, sans-serif;
     font-size: 1.30rem;
     color: #DA9655;
+    width: 18vw;
 }

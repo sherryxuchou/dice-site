@@ -68,8 +68,8 @@ const diceImages = [
     document.querySelector(".dice-image-6")
 ];
 
-const button = document.querySelector(".dicetray");
-let box_min_x = 300;
+const button = document.querySelector(".tray-img");
+let box_min_x = 350;
 let box_min_y = 0;
 let box_max_x = 610;
 let box_max_y = 550;
