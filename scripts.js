@@ -1,9 +1,7 @@
 function generateRandomPicture(imageArray, diceArray){
-    console.log(diceArray)
     for (ind in diceArray) {
         let die = diceArray[ind];
         let randomNum = Math.floor(Math.random() * imageArray.length);
-        console.log(imageArray[randomNum])
 	    die.setAttribute("src", imageArray[randomNum]);
         let randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
         let randomY = Math.floor(Math.random() * box_range_y) + box_min_y;
