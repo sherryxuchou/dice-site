@@ -14,8 +14,8 @@
 
 .title{
     position: relative;
-    top: -1050px;
-    left: 870px;
+    top: -1120px;
+    left: 900px;
     z-index: 1;
 }
 
@@ -33,5 +33,45 @@
     font-family: "Sofia Pro", Arial, Helvetica, sans-serif;
     font-size: 1.30rem;
     color: #DA9655;
-    width: 18vw;
+    width: 19vw;
+}
+
+.buttons{
+    position: relative;
+    top: -45vh;
+    left: 82%;
+}
+
+.buttons img{
+    width: 7vw;
+    height: auto;
+    margin-left: -40px;
+}
+
+.buttons button{
+    background-color: transparent;
+    border: none;
+}
+
+.text h2{
+    font-family: "Draconis", Arial, Helvetica, sans-serif;
+    font-size: 8.50rem;
+    color: black;
+    width: 48vw;
+    line-height: 12vh;
+    margin-top: -1100px;
+    margin-left: 930px;
+}
+
+  
+
+
+@media print {
+    /* .dicetray img{
+        display: none;
+    } */
+    .dice img{
+        width: auto; /*8vw; */
+        height: 8vw; /*auto;*/
+    }
 }

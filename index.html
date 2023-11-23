@@ -18,7 +18,6 @@
         <img class="dice-image-4" src="">
         <img class="dice-image-5" src="">
         <img class="dice-image-6" src="">
-        <script src="scripts.js"></script>
     </div>
 
     <div class="title">
@@ -32,11 +31,27 @@
             A note to all adventurers: upon receiving your outcomes, please click on the print button to export them as PDFs. Then click on the save button to save it into the Google drive folder. 
         </div>
     </div>
-  
-
     
+    <div class="buttons">
+        <button>
+            <img class="refreshOutcome" src="images/roll.png">
+        </button>
+        
+        <button onClick="window.print()">
+            <img src="images/print.png">
+        </button>
+
+        <button onclick="window.open('https://drive.google.com/drive/folders/18DW2GHDbBAnESkCCzzOLpUv94UFy5yxs?usp=sharing','_blank')">
+            <img src="images/save.png">
+        </button>
+    </div>
+
+    <div class="text">
+        <h2 id="sentences">hello</h2>
+    </div>
 
 
+    <script src="scripts.js"></script>
     
 </body>
 </html>
