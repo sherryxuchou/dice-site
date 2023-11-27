@@ -1,13 +1,15 @@
 function generateRandomPicture(imageArray, diceArray){
     for (ind in diceArray) {
-        let die = diceArray[ind];
-        let randomNum = Math.floor(Math.random() * imageArray.length);
+        var die = diceArray[ind];
+        var randomNum = Math.floor(Math.random() * imageArray.length);
 	    die.setAttribute("src", imageArray[randomNum]);
-        let randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
-        let randomY = Math.floor(Math.random() * box_range_y) + box_min_y;
+        var randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
+        var randomY = Math.floor(Math.random() * box_range_y) + box_min_y;
         die.style.left = (randomX - ind * 150) + "px"
         die.style.top = (randomY - 800) + "px"
+        die.style.height = "8vw";
     }
+    document.getElementById("sentences").innerText = ""
 	// let randomNum = Math.floor(Math.random() * imageArray.length); 
 	// image.setAttribute("src", imageArray[randomNum]);
     // let randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
@@ -72,9 +74,9 @@ const diceImages = [
 const button = document.querySelector(".tray-img");
 const outcomeButton = document.querySelector(".refreshOutcome");
 let box_min_x = 350;
-let box_min_y = 0;
+let box_min_y = 700;
 let box_max_x = 610;
-let box_max_y = 550;
+let box_max_y = 1250;
 
 let box_range_x = box_max_x - box_min_x;
 let box_range_y = box_max_y - box_min_y;
@@ -101,7 +103,7 @@ function getRandomSentence () {
 var sentences= [
     'you got sat on by a mountain troll',
     'you got beat up by a goat',
-    'you fell to the bottom of a well',
+    'you fell to the bottom of a well and drowned',
     'you tried to summon a powerful creature but summoned a rock instead',
     'you become possessed by an evil spirit',
     'you slipped getting out of the tub, faceplanted, and died',
@@ -111,34 +113,41 @@ var sentences= [
     'the townspeople burnt you at the stake',
     'you tripped over a root and drowned in a puddle',
     'you fell down a hole and encountered a minotaur',
-    'you tried to tame a dragon. it did not work',
-    'is like Bazooka Joe, 5 cents a blow',
-    'is like an ATM, open 24/7',
-    'is like a championship ring, everybody puts a finger in her'
+    'you tried to tame a dragon. it didn\u0027t work',
+    'goblins clobbered you in the head with a mallet',
+    'you just flat out forgot a healer',
+    'you got gored by a bat',
+    'you tried to get friendly with an owlbear',
+    'you tripped into a barrel and rolled off a cliff',
+    'you got viciously attacked by a ladybug',
+    'death by boiling soup',
+    'you got turned into a slime blob',
+    'your sword slipped through your fingers and you stabbed yourself',
+    'you got trampled by a giant frog',
+    'a troll threw a boulder at your head. you didn\u0027t dodge in time',
+    'you don\u0027t actually know how to play this game',
+    'you had a nice drink at the tavern. too bad it was poisoned',
+    'zombies. that\u0027s it',
+    'you were dunked into a pot of boiling oil by an enraged bugbear',
+    'you got tossed off a castle parapet by an angry princess',
+    'you drank the wrong potion and turned into an orc',
+    'you got punched off an airship',
+    'you tried swimming...in full armor',
+    'you fell into a pit trap and got eaten by rats',
 ];
-
-function scribble(){
-  // get the canvas element you want to write to
-  var canvas = document.getElementById("woodcut");
-  // get a handle for the above canvas (here 2d only for simple text)
-  var context = canvas.getContext("2d");
-  // the canvas is blank the first time only, so erase the content
-  // even if it is already blank, checking for it would be more
-  // complicated and slower, too
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  // choose a font (you can choose the size also as you can see)
-  context.font = "30px Arial";
-  // the letters are filled and they are filled in red
-  context.fillStyle = "red";
-  // center the text horizontally
-  context.textAlign = "center";
-  // put a random line in the middle of the canvas
-  // the +10 account for the fonttype's height
-  context.fillText(getRandomSentence(),0, canvas.height/2 + 10);
-}
 
 function spawnOutcome() {
     var outcome = document.getElementById("sentences")
-    console.log("hi")
     outcome.innerText = getRandomSentence();
+    var mainDie = diceImages[0];
+    var randomNum = Math.floor(Math.random() * imageArray.length);
+    mainDie.setAttribute("src", imageArray[randomNum]);
+    mainDie.style.left = box_min_x + "px";
+    mainDie.style.top = -200 + "px";
+    mainDie.style.height = "20vw";
+
+    for (var i = 1; i < diceImages.length; i++) {
+        var dieGone = diceImages[i];
+	    dieGone.setAttribute("src", "");
+    }
 }
