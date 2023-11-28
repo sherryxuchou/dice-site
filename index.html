@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" media="screen,print"/>
     <title>🎲 di(c)e 🎲</title>
-</head>
-<body>    
-    <div class="dicetray">
-        <img class="tray-img" src="images/dice-tray-2.png">
-    </div>
+  </head>
+  <body>
+    <div>
+      <div class="dicetray">
+        <img class="tray-img" src="images/dice-tray-2.png" />
+      </div>
 
-    <div class="title">
+      <div class="title">
         <button onclick="displayText()">
-            <img src="images/title.png">
-        </button>    
-        <div id="textField" style="display: none;">
-            <strong>DI(C)E</strong> is an exhibition showcasing the endless possibilities of random generation through the lens of the most well-known table top game, Dungeons & Dragons. Through the usage of randomly generated outcomes, numbers, and images, viewers will get a chance to go on their own adventure, however long or short it may be.
-            <br>
-            <br>
-            A note to all adventurers: upon receiving your outcomes, please click on the print button to export them as PDFs. Then click on the save button to save it into the Google drive folder. 
+          <img src="images/title.png" />
+        </button>
+        <div id="textField" style="display: none">
+          <strong>DI(C)E</strong> is an exhibition showcasing the endless
+          possibilities of random generation through the lens of the most
+          well-known table top game, Dungeons & Dragons. Through the usage of
+          randomly generated outcomes, numbers, and images, viewers will get a
+          chance to go on their own adventure, however long or short it may be.
+          <br />
+          <br />
+          A note to all adventurers: upon receiving your outcomes, please click
+          on the print button to export them as PDFs. Then click on the save
+          button to save it into the Google drive folder.
         </div>
-    </div>
-    
-    <div class="buttons">
+      </div>
+
+      <div class="buttons">
         <button>
-            <img class="refreshOutcome" src="images/roll.png">
-        </button>
-        
-        <button onClick="window.print()">
-            <img src="images/print.png">
+          <img class="refreshOutcome" src="images/roll.png" />
         </button>
 
-        <button onclick="window.open('https://drive.google.com/drive/folders/18DW2GHDbBAnESkCCzzOLpUv94UFy5yxs?usp=sharing','_blank')">
-            <img src="images/save.png">
+        <button >
+          <img class="printImg" src="images/print.png" />
         </button>
-    </div>
 
-    <div class="text">
+        <button
+          onclick="window.open('https://drive.google.com/drive/folders/18DW2GHDbBAnESkCCzzOLpUv94UFy5yxs?usp=sharing','_blank')"
+        >
+          <img src="images/save.png" />
+        </button>
+      </div>
+
+      <div class="text">
         <h2 id="sentences"></h2>
-    </div>
+      </div>
 
-    <div class="dice">
-        <img class="dice-image-1" src="">
-        <img class="dice-image-2" src="">
-        <img class="dice-image-3" src="">
-        <img class="dice-image-4" src="">
-        <img class="dice-image-5" src="">
-        <img class="dice-image-6" src="">
+      <div class="dice">
+        <img class="dice-image-1" src="" />
+        <img class="dice-image-2" src="" />
+        <img class="dice-image-3" src="" />
+        <img class="dice-image-4" src="" />
+        <img class="dice-image-5" src="" />
+        <img class="dice-image-6" src="" />
+      </div>
     </div>
-
 
     <script src="scripts.js"></script>
-    
-</body>
+  </body>
 </html>

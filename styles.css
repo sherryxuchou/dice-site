@@ -1,77 +1,101 @@
-.dicetray img{
- width: auto;
- height: 100vh;
+.dicetray img {
+  width: auto;
+  height: 100vh;
+  /* background-color: red; */
 }
 
-.dice img{
-    position: relative;
-    top: -800px;
-    left: 500px;
-    width: auto; /*8vw; */
-    height: 8vw; /*auto;*/
-    object-fit: contain;
+.dice img {
+  position: relative;
+  /* top: 0vh;
+  left: 0vw; */
+  width: auto; /*8vw; */
+  height: 16vh; /*auto;*/
+  object-fit: contain;
+  /* z-index: 1;
+  position: relative; */
 }
 
-.title{
-    position: relative;
-    top: -975px;
-    left: 900px;
-    z-index: 1;
+.title {
+  position: relative;
+  top: -100vh;
+  left: 95vh;
+  z-index: 1;
 }
 
-.title img{
-    width: 20vw;
-    height: auto;
+.title img {
+  width: auto;
+  height: 20vh;
 }
 
 .title button {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
-#textField{
-    font-family: "Sofia Pro", Arial, Helvetica, sans-serif;
-    font-size: 1.30rem;
-    color: #DA9655;
-    width: 19vw;
+#textField {
+  font-family: "Sofia Pro", Arial, Helvetica, sans-serif;
+  font-size: 2vh;
+  color: #da9655;
+  width: 19vw;
 }
 
-.buttons{
-    position: relative;
-    top: -30vh;
-    left: 82%;
+.buttons {
+  position: relative;
+  top: -30vh;
+  left: calc(52% + 30vw);
 }
 
-.buttons img{
-    width: 7vw;
-    height: auto;
-    margin-left: -40px;
+.buttons img {
+  width: auto;
+  height: 7vh;
+  margin-left: calc(-300px + 5vw);
 }
 
-.buttons button{
-    background-color: transparent;
-    border: none;
+.buttons button {
+  background-color: transparent;
+  border: none;
 }
 
-.text h2{
-    font-family: "Draconis", Arial, Helvetica, sans-serif;
-    font-size: 8.50rem;
-    color: black;
-    width: 48vw;
-    line-height: 12vh;
-    margin-top: -1100px;
-    margin-left: 930px;
+.text h2 {
+  font-family: "Draconis", Arial, Helvetica, sans-serif;
+  font-size: 15vh;
+  color: black;
+  width: 48vw;
+  line-height: 13vh;
+  margin-top: -105vh;
+  margin-left: 98vh;
 }
-
-  
-
 
 @media print {
-    /* .dicetray img{
-        display: none;
-    } */
-    .dice img{
-        width: auto; /*8vw; */
-        height: 8vw; /*auto;*/
-    }
+  .dicetray img {
+    display: none;
+  }
+  .buttons img {
+    display: none;
+  }
+  #textField {
+    display: none;
+  }
+  .title img {
+    display: none;
+  }
+  .dice-image-2, .dice-image-3, .dice-image-4, .dice-image-5, .dice-image-6 {
+   display: none;
+  }
+
+  .dice-image-1 {
+    margin-left: -35vh;
+    margin-top: -25vh;
+    z-index: -1;
+  }
+  
+  .text h2 {
+    font-size: 16vh;
+    line-height: 12vh;
+    margin-top: 20vh;
+    margin-left: 0vh;
+    width: 80vh;
+    transform: rotate(-90deg);
+    z-index: 10;
+  }
 }

@@ -5,18 +5,12 @@ function generateRandomPicture(imageArray, diceArray){
 	    die.setAttribute("src", imageArray[randomNum]);
         var randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
         var randomY = Math.floor(Math.random() * box_range_y) + box_min_y;
-        die.style.left = (randomX - ind * 150) + "px"
-        die.style.top = (randomY - 800) + "px"
-        die.style.height = "8vw";
+        die.style.left = (randomX - ind * 16) + "vh"
+        die.style.top = (randomY - 150) + "vh"
+        die.style.height = "16vh";
     }
     document.getElementById("sentences").innerText = ""
-	// let randomNum = Math.floor(Math.random() * imageArray.length); 
-	// image.setAttribute("src", imageArray[randomNum]);
-    // let randomX = Math.floor(Math.random() * box_range_x) + box_min_x;
-    // let randomY = Math.floor(Math.random() * box_range_y) + box_min_y;
-    // image.style.left = randomX + "px"
-    // image.style.top = (randomY - 800) + "px"
-    // image.style.top=y;
+	
 }
 
 const imageArray = [
@@ -73,10 +67,11 @@ const diceImages = [
 
 const button = document.querySelector(".tray-img");
 const outcomeButton = document.querySelector(".refreshOutcome");
-let box_min_x = 350;
-let box_min_y = 700;
-let box_max_x = 610;
-let box_max_y = 1250;
+const printButton = document.querySelector(".printImg");
+let box_min_x = 40;
+let box_min_y = 130;
+let box_max_x = 65;
+let box_max_y = 190;
 
 let box_range_x = box_max_x - box_min_x;
 let box_range_y = box_max_y - box_min_y;
@@ -85,6 +80,7 @@ window.onload = () => generateRandomPicture(imageArray, diceImages);
 
 button.addEventListener("click", () => generateRandomPicture(imageArray, diceImages));
 outcomeButton.addEventListener("click", () => spawnOutcome());
+printButton.addEventListener("click", () => printPage());
 
 function displayText() {
   var text = document.getElementById("textField");
@@ -142,12 +138,27 @@ function spawnOutcome() {
     var mainDie = diceImages[0];
     var randomNum = Math.floor(Math.random() * imageArray.length);
     mainDie.setAttribute("src", imageArray[randomNum]);
-    mainDie.style.left = box_min_x + "px";
-    mainDie.style.top = -200 + "px";
-    mainDie.style.height = "20vw";
+    mainDie.style.left = "40vh";
+    mainDie.style.top =  -100 * (outcome.offsetHeight/window.innerHeight) + "vh";
+    console.log(mainDie.style.top)
+    mainDie.style.height = "40vh";
 
     for (var i = 1; i < diceImages.length; i++) {
         var dieGone = diceImages[i];
 	    dieGone.setAttribute("src", "");
     }
+}
+
+function printPage() {
+    var outcome = document.getElementById("sentences")
+    if (outcome.innerText != "") {
+        var mainDie = diceImages[0];
+        var randomY = Math.floor(Math.random() * 30) - 20;
+        var randomX = Math.floor(Math.random() * 6) - 3;
+        mainDie.style.top =  -100 * (outcome.offsetHeight/window.innerHeight) + randomY + "vh";
+        mainDie.style.left = 40 + randomX + "vh";
+        console.log(mainDie.style.top)
+        window.print()
+    }
+    
 }
