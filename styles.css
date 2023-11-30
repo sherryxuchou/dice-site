@@ -1,7 +1,6 @@
 .dicetray img {
   width: auto;
   height: 100vh;
-  /* background-color: red; */
 }
 
 .dice img {
@@ -37,18 +36,37 @@
   font-size: 2vh;
   color: #da9655;
   width: 19vw;
+  position: relative;
+  left: 30vh;
+}
+
+.diceroll{
+  position: relative;
+  top: -110vh;
+  left: 10vh;
+}
+
+.diceroll img{
+  width: auto;
+  height: 12vh;
+  margin-left: 5px;
+}
+
+.diceroll button{
+  background-color: transparent;
+  border: none;
 }
 
 .buttons {
   position: relative;
-  top: -30vh;
-  left: calc(52% + 30vw);
+  top: -45vh;
+  left: 160vh;
 }
 
 .buttons img {
   width: auto;
-  height: 7vh;
-  margin-left: calc(-300px + 5vw);
+  height: 9vh;
+  margin-left: -20px;
 }
 
 .buttons button {
@@ -61,8 +79,8 @@
   font-size: 15vh;
   color: black;
   width: 48vw;
-  line-height: 13vh;
-  margin-top: -105vh;
+  line-height: 12.25vh;
+  margin-top: -120vh;
   margin-left: 98vh;
 }
 
@@ -79,7 +97,11 @@
   .title img {
     display: none;
   }
-  .dice-image-2, .dice-image-3, .dice-image-4, .dice-image-5, .dice-image-6 {
+  .dice-image-2, 
+  .dice-image-3, 
+  .dice-image-4, 
+  .dice-image-5, 
+  .dice-image-6 {
    display: none;
   }
 
@@ -91,8 +113,8 @@
   
   .text h2 {
     font-size: 16vh;
-    line-height: 12vh;
-    margin-top: 20vh;
+    line-height: 12.25vh;
+    margin-top: 10vh;
     margin-left: 0vh;
     width: 80vh;
     transform: rotate(-90deg);
