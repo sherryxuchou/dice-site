@@ -128,7 +128,7 @@ var sentences = [
     'you got sat on by a mountain troll',
     'you got beat up by a goat',
     'you fell to the bottom of a well and drowned',
-    'you tried to summon a powerful creature but got a rock instead',
+    'you got eaten by a gelatinous cube',
     'you become possessed by an evil spirit',
     'you slipped getting out of the tub, faceplanted, and died',
     'a cat scratched your entire face off',
@@ -164,7 +164,7 @@ var sentences = [
     'you tried to play fetch with a werewolf',
     'you tried to juggle an alchemist\u0027s fire flasks',
     'you opened a treasure chest and noticed it had teeth',
-    'you played a game of hot potato with a live bomb. you lost'
+    'you played hot potato with a live bomb. you lost'
 ];
 
 function spawnOutcome() {
