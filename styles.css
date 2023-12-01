@@ -11,8 +11,8 @@
   width: auto; /*8vw; */
   height: 16vh; /*auto;*/
   object-fit: contain;
-  /* z-index: 1;
-  position: relative; */
+  /* z-index: 5; */
+  /* position: relative; */
 }
 
 .title {
@@ -61,8 +61,8 @@
 
 .buttons {
   position: relative;
-  top: -45vh;
-  left: 170vh;
+  top: -48vh;
+  left: 85vw;
 }
 
 .buttons img {
@@ -132,9 +132,17 @@
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
   .alert img{
     width: auto;
-    height: 70vh;
+    height: 90vh;
+    display: block;
+    margin-top: -59vh;
+    margin-left: 10vw;
+    background-color: black;
+    z-index: 10;
+  }
+  .dice img{
+    z-index: -1;
   }
 }

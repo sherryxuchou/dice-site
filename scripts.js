@@ -1,4 +1,7 @@
 function generateRandomPicture(imageArray, diceArray) {
+    if (text.style.display === "block") {
+        closeText();
+    }
     for (ind in diceArray) {
         var die = diceArray[ind];
         var randomNum = Math.floor(Math.random() * imageArray.length);
@@ -10,8 +13,7 @@ function generateRandomPicture(imageArray, diceArray) {
         die.style.height = "16vh";
     }
     outcome.innerText = "";
-    outcomeButton.style.top = "-110vh";
-    menuButtons.style.top = "-45vh";
+    menuButtons.style.display = "none";
 
 }
 
@@ -74,10 +76,14 @@ const outcome = document.getElementById("sentences")
 const text = document.getElementById("textField");
 const menuButtons = document.querySelector(".buttons");
 const titleButton = document.querySelector(".titleImg");
+
+outcomeButton.style.top = "-110vh";
+menuButtons.style.top = "-48vh";
+
 let box_min_x = 40;
-let box_min_y = 130;
+let box_min_y = 140;
 let box_max_x = 65;
-let box_max_y = 190;
+let box_max_y = 200;
 
 let box_range_x = box_max_x - box_min_x;
 let box_range_y = box_max_y - box_min_y;
@@ -92,17 +98,25 @@ titleButton.addEventListener("click", () => displayText());
 
 function displayText() {
     if (text.style.display === "none") {
-        generateRandomPicture(imageArray, diceImages);
-        text.style.display = "block";
-        var amount = 100 * (text.offsetHeight / window.innerHeight);
-        moveEverything(-1 * amount);
-        titleButton.setAttribute("src","images/title-2.png")
+        openText();
     } else {
-        var amount = 100 * (text.offsetHeight / window.innerHeight);
-        text.style.display = "none";
-        moveEverything(amount);
-        titleButton.setAttribute("src","images/title.png")
+        closeText();
     }
+}
+
+function openText() {
+    generateRandomPicture(imageArray, diceImages);
+    text.style.display = "block";
+    var amount = 100 * (text.offsetHeight / window.innerHeight);
+    moveEverything(-1 * amount);
+    titleButton.setAttribute("src","images/title-4.png")
+}
+
+function closeText() {
+    var amount = 100 * (text.offsetHeight / window.innerHeight);
+    text.style.display = "none";
+    moveEverything(amount);
+    titleButton.setAttribute("src","images/title.png")
 }
 
 function getRandomSentence() {
@@ -154,6 +168,9 @@ var sentences = [
 ];
 
 function spawnOutcome() {
+    if (text.style.display === "block") {
+        closeText();
+    }
     outcome.innerText = getRandomSentence();
     var mainDie = diceImages[0];
     var randomNum = Math.floor(Math.random() * imageArray.length);
@@ -166,6 +183,7 @@ function spawnOutcome() {
         var dieGone = diceImages[i];
         dieGone.setAttribute("src", "");
     }
+    menuButtons.style.display = "block";
 }
 
 function printPage() {
