@@ -1,3 +1,4 @@
+
 .dicetray img {
   width: auto;
   height: 100vh;
@@ -37,13 +38,14 @@
   color: #da9655;
   width: 19vw;
   position: relative;
-  left: 30vh;
+  left: 55vh;
+  top: -18vh;
 }
 
 .diceroll{
   position: relative;
   top: -110vh;
-  left: 10vh;
+  left: 11vh;
 }
 
 .diceroll img{
@@ -60,13 +62,13 @@
 .buttons {
   position: relative;
   top: -45vh;
-  left: 160vh;
+  left: 170vh;
 }
 
 .buttons img {
   width: auto;
-  height: 9vh;
-  margin-left: -20px;
+  height: 12vh;
+  margin-left: -10px;
 }
 
 .buttons button {
@@ -82,6 +84,10 @@
   line-height: 12.25vh;
   margin-top: -120vh;
   margin-left: 98vh;
+}
+
+.alert img{
+  display: none;
 }
 
 @media print {
@@ -119,5 +125,16 @@
     width: 80vh;
     transform: rotate(-90deg);
     z-index: 10;
+  }
+
+  html, body{
+    height: 99%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .alert img{
+    width: auto;
+    height: 70vh;
   }
 }

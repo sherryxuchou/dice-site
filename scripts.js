@@ -194,3 +194,4 @@ function moveItem(item, amount) {
     y = y + amount;
     item.style.top = y + "vh";
 }
+
