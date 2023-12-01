@@ -135,14 +135,16 @@
 @media only screen and (max-width: 900px){
   .alert img{
     width: auto;
-    height: 90vh;
+    height: 101vh;
     display: block;
     margin-top: -59vh;
-    margin-left: 10vw;
-    background-color: black;
     z-index: 10;
   }
   .dice img{
+    z-index: -1;
+  }
+
+  .diceroll{
     z-index: -1;
   }
 }
