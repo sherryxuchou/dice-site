@@ -57,7 +57,12 @@ const imageArray = [
     "images/dice/dice-37.png",
     "images/dice/dice-38.png",
     "images/dice/dice-39.png",
-    "images/dice/dice-40.png"
+    "images/dice/dice-40.png",
+    "images/dice/dice-41.png",
+    "images/dice/dice-42.png",
+    "images/dice/dice-43.png",
+    "images/dice/dice-44.png",
+    "images/dice/dice-45.png"
 ];
 
 const diceImages = [
