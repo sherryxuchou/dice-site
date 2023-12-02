@@ -78,7 +78,7 @@
 
 @font-face {
   font-family: Draconis;
-  src: url(font/Draconis-JRw6B.ttf);
+  src: url(../dice-site/font/Draconis-JRw6B.ttf) format('truetype');
 }
 
 .text h2 {
