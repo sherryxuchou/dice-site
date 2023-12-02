@@ -76,6 +76,11 @@
   border: none;
 }
 
+@font-face {
+  font-family: "Draconis", Helvetica, Arial, sans-serif;
+  src: url(Draconis-JRw6B.ttf);
+}
+
 .text h2 {
   font-family: "Draconis", Helvetica, Arial, sans-serif;
   font-size: 15vh;
