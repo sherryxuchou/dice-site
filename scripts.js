@@ -172,7 +172,16 @@ var sentences = [
     'you tried to play fetch with a werewolf',
     'you tried to juggle an alchemist\u0027s fire flasks',
     'you opened a treasure chest and noticed it had teeth',
-    'you played hot potato with a live bomb. you lost'
+    'you played hot potato with a live bomb. you lost',
+    'you got blinded by a swarm of fireflies',
+    'you moonwalked through a graveyard and angered the ghosts',
+    'you tried to tame a basilisk with a heartfelt speech',
+    'you tried to outdrink a dwarf',
+    'you napped in a field of flowers, but they were carnivorous',
+    'you got swept up by a hoard of enchanted brooms',
+    'you tried to steal gold from a sleeping dragon. the dragon woke up',
+    'you spontaneously combusted'
+
 ];
 
 function spawnOutcome() {
