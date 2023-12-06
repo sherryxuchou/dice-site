@@ -179,7 +179,6 @@ var sentences = [
     'you tried to outdrink a dwarf',
     'you napped in a field of flowers, but they were carnivorous',
     'you got swept up by a hoard of enchanted brooms',
-    'you tried to steal gold from a sleeping dragon. the dragon woke up',
     'you spontaneously combusted'
 
 ];
