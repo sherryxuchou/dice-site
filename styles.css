@@ -59,6 +59,10 @@
   border: none;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 .buttons {
   position: relative;
   top: -48vh;
